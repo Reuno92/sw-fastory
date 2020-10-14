@@ -2,19 +2,19 @@
 for nodejs with ts-node
  
 ## Installation
-```git
+```bash
 git clone https://gitlab.com/renaudQwest/ts-node-configured.git
 ```
 
 ## Start
-```git
+```bash
 yarn install
 ```
 
 ## Utilization
 
 ### Before commit 
-```git
+```bash
 yarn commit
 ```
 It uses eslint and prettier in this order.
@@ -53,17 +53,24 @@ ESLint is configuring in file `.eslintrc` with different plugins such as:
 ``` 
  
 ### Start in development
-```git
+```bash
 yarn start:dev
 ```
 
 ### Start in production
-```git
+```bash
 yarn start
 ```
 
+### Testing
+```bash
+yarn test
+```
+
+Unit test based with two modules `Mocha` and `Chai` for more flexibility.
+  
+
 ### Coming soon
 
-* Installation Unit testing
 * Installation Husky (Scripting lint and testing before commit and before push )
 

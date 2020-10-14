@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start"     : "npm run build && node build/index.js",
-    "start:dev" : "nodemon",
-    "lint"      : "eslint . --ext .ts",
-    "build"     : "rimraf ./build && tsc",
-    "test"      : "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && node build/index.js",
+    "start:dev": "nodemon",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "commit": "yarn lint & yarn prettier-format",
+    "build": "rimraf ./build && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +23,10 @@
     "typescript": "^4.0.3"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.5",
+    "prettier": "2.1.2",
     "rimraf": "^3.0.2",
     "ts-node": "^9.0.0"
   }

@@ -191,4 +191,7 @@ dist
 .pnp.*
 
 .idea
-.node_modules
+node_modules
+yarn.lock
+package.lock
+build

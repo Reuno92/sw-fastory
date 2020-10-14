@@ -17,7 +17,7 @@ yarn install
 ```bash
 yarn commit
 ```
-It uses eslint and prettier in this order.
+It uses prettier and eslint in this order.
 
 ESLint is configuring in file `.eslintrc` with different plugins such as:
 ```json

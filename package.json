@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node build/index.js",
-    "start:dev": "nodemon",
-    "build": "rimraf ./build && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start"     : "npm run build && node build/index.js",
+    "start:dev" : "nodemon",
+    "lint"      : "eslint . --ext .ts",
+    "build"     : "rimraf ./build && tsc",
+    "test"      : "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

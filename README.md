@@ -68,9 +68,17 @@ yarn test
 ```
 
 Unit test based with two modules `Mocha` and `Chai` for more flexibility.
-  
 
-### Coming soon
+### Preflight commit
 
-* Installation Husky (Scripting lint and testing before commit and before push )
+Husky used for preflight checking with prettier module, eslint module ant its plugins.
 
+It will be executed before a commit such as:
+```bash
+git commit -m "<YOUR_MESSAGE>"
+```
+
+Before a push in the repository:
+```bash
+git push -u origin master
+```

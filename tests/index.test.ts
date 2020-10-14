@@ -1,7 +1,7 @@
-import { expect } from 'chai';
-import 'mocha';
+import { expect } from "chai";
+import "mocha";
 
-describe('First test', () => {
+describe("First test", () => {
   before(function () {
     // runs once before the first test in this block
   });
@@ -18,9 +18,9 @@ describe('First test', () => {
     // runs after each test in this block
   });
 
-  it('should be return 3 with a: 1 b:2', () => {
-    let a = 1;
-    let b = 2;
+  it("should be return 3 with a: 1 b:2", () => {
+    const a = 1;
+    const b = 2;
     expect(a + b).to.equal(3);
   });
-})
+});

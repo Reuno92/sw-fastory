@@ -8,7 +8,7 @@
     "start:dev": "nodemon",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "commit": "yarn prettier-format && yarn lint",
+    "preflight": "yarn prettier-format --fix && yarn lint",
     "build": "rimraf ./build && tsc",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
@@ -37,8 +37,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run commit && yarn run test",
-      "pre-push": "yarn run commit && yarn run test"
+      "pre-commit": "yarn run preflight && yarn run test",
+      "pre-push": "yarn run preflight && yarn run test"
     }
   }
 }

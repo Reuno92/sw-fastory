@@ -3,7 +3,7 @@
  *
  * A People resource is an individual person or character within the Star Wars universe.
  */
-export class PeopleV1Routes {
+export class PeopleV1Models {
   /**
    *
    * @param { string } name - The name of this person.

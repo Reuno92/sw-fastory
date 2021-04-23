@@ -1,9 +1,8 @@
-import * as Hapi from 'hapi';
-import { Server, ServerInjectOptions, ServerInjectResponse } from 'hapi';
+import * as Hapi from "hapi";
+import { Server } from "hapi";
 import morgan from "morgan";
 
 class ServerNode {
-
   private static instance: Server | undefined;
   private static port: number;
   private static host: string;
@@ -15,10 +14,10 @@ class ServerNode {
   }
 
   private static async serverConfiguration() {
-      this.instance = await new Hapi.Server({
-        port: this.port,
-        host: this.host
-      });
+    this.instance = await new Hapi.Server({
+      port: this.port,
+      host: this.host
+    });
   }
 
   private static async init(): Promise<void> {
@@ -28,13 +27,12 @@ class ServerNode {
 
       console.log(`Server starting on http://${this.host}:${this.port}`);
 
-      morgan('dev');
+      morgan("dev");
     } catch (err) {
       console.log(err);
       throw err;
     }
   }
-
 }
 
-new ServerNode(3000, 'localhost');
+new ServerNode(3000, "localhost");

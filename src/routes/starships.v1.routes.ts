@@ -2,6 +2,7 @@ import { Request, ServerRoute } from "hapi";
 import { StarshipsV1Controller } from "../controllers/StarshipsController";
 import { ResponseV1Model } from "../models/Response.v1.model";
 import { StarshipsV1Models } from "../models/Starships.v1.models";
+import { SearchController } from "../controllers/SearchController";
 
 const APIV1 = "/api/v1/";
 
@@ -9,7 +10,12 @@ const StarshipsV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "starships/",
-    handler: (): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Model> => {
+
+      if (request.query?.search) {
+        return new SearchController().searchTerm('starships', request.query?.search.toString())
+      }
+
       return new StarshipsV1Controller().getAllStarships();
     },
     options: {

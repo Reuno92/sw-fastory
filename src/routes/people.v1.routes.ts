@@ -2,6 +2,7 @@ import { ServerRoute } from "hapi";
 import { PeopleController } from "../controllers/PeopleController";
 import { ResponseV1Model } from "../models/Response.v1.model";
 import { Request } from "hapi";
+import { SearchController } from "../controllers/SearchController";
 
 const APIV1 = "/api/v1/";
 
@@ -9,7 +10,12 @@ const PeopleV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "people/",
-    handler: (): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Model> => {
+
+      if (request.query?.search) {
+          return new SearchController().searchTerm('people', request.query?.search.toString());
+      }
+
       return new PeopleController().getAllPeople();
     },
     options: {

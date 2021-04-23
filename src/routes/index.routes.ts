@@ -3,7 +3,7 @@ import rootV1Routes from "./root.v1.routes";
 import PeopleV1Routes from "./people.v1.routes";
 import FilmsV1Routes from "./films.v1.routes";
 import StarshipsV1Routes from "./starships.v1.routes";
-import VehiclesV1Routes from "./vehicules.v1.routes";
+import VehiclesV1Routes from "./vehicles.v1.routes";
 import SpeciesV1Routes from "./species.v1.routes";
 import PlanetV1Routes from "./planets.v1.routes";
 
@@ -14,7 +14,7 @@ const routes: Array<ServerRoute> = [
   ...StarshipsV1Routes,
   ...VehiclesV1Routes,
   ...SpeciesV1Routes,
-  ...PlanetV1Routes
+  ...PlanetV1Routes,
 ];
 
 export default routes;

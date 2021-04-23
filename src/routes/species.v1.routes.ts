@@ -2,6 +2,7 @@ import { Request, ServerRoute } from "hapi";
 import { ResponseV1Model } from "../models/Response.v1.model";
 import { SpeciesController } from "../controllers/SpeciesController";
 import { SpeciesV1Model } from "../models/Species.v1.model";
+import { SearchController } from "../controllers/SearchController";
 
 const APIV1 = "/api/v1/species/";
 
@@ -9,7 +10,12 @@ const SpeciesV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1,
-    handler: (): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Model> => {
+
+      if (request.query?.search) {
+        return new SearchController().searchTerm('species', request.query?.search.toString())
+      }
+
       return SpeciesController.getAllSpecies();
     },
     options: {

@@ -1,7 +1,7 @@
 import { ResponseV1Model } from "../models/Response.v1.model";
 import axios, { AxiosResponse } from "axios";
 
-export class FilmController {
+export class FilmsController {
   public getAllMovies(): Promise<ResponseV1Model> {
     return axios
       .get("https://swapi.dev/api/films/")

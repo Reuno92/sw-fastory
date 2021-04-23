@@ -1,7 +1,7 @@
 import { Request, ServerRoute } from "hapi";
 import { ResponseV1Model } from "../models/Response.v1.model";
 import { VehiclesV1Models } from "../models/Vehicles.v1.models";
-import { VehiclesController } from "../controllers/Vehicles.Controller";
+import { VehiclesController } from "../controllers/VehiclesController";
 
 const APIV1 = "/api/v1/";
 

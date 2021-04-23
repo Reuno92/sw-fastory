@@ -2,7 +2,6 @@ import axios from "axios";
 import { ResponseV1Model } from "../models/Response.v1.model";
 
 export class PeopleController {
-
   public getAllPeople(): Promise<ResponseV1Model> {
     return axios
       .get("https://swapi.dev/api/people/")

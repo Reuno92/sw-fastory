@@ -1,11 +1,11 @@
 import { ServerRoute } from "hapi";
 import rootV1Routes from "./root.v1.routes";
-import PeopleV1Routes from "./people.v1.routes";
-import FilmsV1Routes from "./films.v1.routes";
-import StarshipsV1Routes from "./starships.v1.routes";
-import VehiclesV1Routes from "./vehicles.v1.routes";
-import SpeciesV1Routes from "./species.v1.routes";
-import PlanetV1Routes from "./planets.v1.routes";
+import PeopleV1Routes from "./People.v1.routes";
+import FilmsV1Routes from "./Films.v1.routes";
+import StarshipsV1Routes from "./Starships.v1.routes";
+import VehiclesV1Routes from "./Vehicles.v1.routes";
+import SpeciesV1Routes from "./Species.v1.routes";
+import PlanetV1Routes from "./Planets.v1.routes";
 
 const routes: Array<ServerRoute> = [
   ...rootV1Routes,

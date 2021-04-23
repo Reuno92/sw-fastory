@@ -1,10 +1,9 @@
 /**
  * People Model Version One
  *
- * Define resource for People endpoints
+ * A People resource is an individual person or character within the Star Wars universe.
  */
 export class PeopleV1Routes {
-
   /**
    *
    * @param { string } name - The name of this person.

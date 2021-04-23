@@ -4,7 +4,6 @@
  * Define resource for films endpoints
  */
 class FilmsV1Routes {
-
   /**
    *
    * @param { string } title - The title of this film
@@ -37,6 +36,5 @@ class FilmsV1Routes {
     public url: string,
     public created: string,
     public edited: string
-  ) {
-  }
+  ) {}
 }

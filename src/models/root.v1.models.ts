@@ -1,9 +1,9 @@
 /**
  * Root models Version One
- * Define different types routes
+ *
+ * The Root resource provides information on all available resources within the API.
  */
 export class RootV1Models {
-
   constructor(
     public films: string,
     public people: string,

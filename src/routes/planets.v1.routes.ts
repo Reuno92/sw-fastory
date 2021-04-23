@@ -12,7 +12,10 @@ const PlanetV1Routes: Array<ServerRoute> = [
     path: API_PLANET,
     handler: (request: Request): Promise<ResponseV1Model> => {
       if (request.query?.search) {
-        return new SearchController().searchTerm("planets", request.query?.search.toString());
+        return new SearchController().searchTerm(
+          "planets",
+          request.query?.search.toString()
+        );
       }
       return new PlanetsController().getAllPlanets();
     },

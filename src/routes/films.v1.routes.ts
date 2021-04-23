@@ -11,9 +11,11 @@ const FilmV1Routes: Array<ServerRoute> = [
     method: "GET",
     path: APIV1,
     handler: (request: Request): Promise<ResponseV1Model> => {
-
       if (request.query?.search) {
-          return new SearchController().searchTerm('films', request.query?.search.toString())
+        return new SearchController().searchTerm(
+          "films",
+          request.query?.search.toString()
+        );
       }
 
       return new FilmsController().getAllMovies();

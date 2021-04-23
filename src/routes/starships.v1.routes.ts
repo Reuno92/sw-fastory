@@ -11,9 +11,11 @@ const StarshipsV1Routes: Array<ServerRoute> = [
     method: "GET",
     path: APIV1 + "starships/",
     handler: (request: Request): Promise<ResponseV1Model> => {
-
       if (request.query?.search) {
-        return new SearchController().searchTerm('starships', request.query?.search.toString())
+        return new SearchController().searchTerm(
+          "starships",
+          request.query?.search.toString()
+        );
       }
 
       return new StarshipsV1Controller().getAllStarships();

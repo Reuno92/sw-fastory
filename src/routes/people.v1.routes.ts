@@ -11,9 +11,11 @@ const PeopleV1Routes: Array<ServerRoute> = [
     method: "GET",
     path: APIV1 + "people/",
     handler: (request: Request): Promise<ResponseV1Model> => {
-
       if (request.query?.search) {
-          return new SearchController().searchTerm('people', request.query?.search.toString());
+        return new SearchController().searchTerm(
+          "people",
+          request.query?.search.toString()
+        );
       }
 
       return new PeopleController().getAllPeople();

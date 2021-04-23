@@ -14,7 +14,7 @@ const routes: Array<ServerRoute> = [
   ...StarshipsV1Routes,
   ...VehiclesV1Routes,
   ...SpeciesV1Routes,
-  ...PlanetV1Routes,
+  ...PlanetV1Routes
 ];
 
 export default routes;

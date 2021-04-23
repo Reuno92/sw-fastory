@@ -1,5 +1,5 @@
 import { ServerRoute } from "hapi";
-import rootV1Routes from "./root.v1.routes";
+import RootV1Routes from "./Root.v1.routes";
 import PeopleV1Routes from "./People.v1.routes";
 import FilmsV1Routes from "./Films.v1.routes";
 import StarshipsV1Routes from "./Starships.v1.routes";
@@ -8,7 +8,7 @@ import SpeciesV1Routes from "./Species.v1.routes";
 import PlanetV1Routes from "./Planets.v1.routes";
 
 const routes: Array<ServerRoute> = [
-  ...rootV1Routes,
+  ...RootV1Routes,
   ...PeopleV1Routes,
   ...FilmsV1Routes,
   ...StarshipsV1Routes,

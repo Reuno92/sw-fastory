@@ -3,7 +3,7 @@
  *
  * Define resource for films endpoints
  */
-class FilmsV1Models {
+export class FilmsV1Models {
   /**
    *
    * @param { string } title - The title of this film
@@ -38,3 +38,4 @@ class FilmsV1Models {
     public edited: string
   ) {}
 }
+

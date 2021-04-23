@@ -1,6 +1,6 @@
 import { ServerRoute } from "hapi";
 import { PeopleController } from "../controllers/PeopleController";
-import { ResponseV1Model } from "../models/Response.v1.model";
+import { ResponseV1Models } from "../models/Response.v1.models";
 import { Request } from "hapi";
 import { SearchController } from "../controllers/SearchController";
 
@@ -10,7 +10,7 @@ const PeopleV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "people/",
-    handler: (request: Request): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Models> => {
       if (request.query?.search) {
         return new SearchController().searchTerm(
           "people",
@@ -27,7 +27,7 @@ const PeopleV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "people/{id}",
-    handler: (request: Request): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Models> => {
       const id: string = request.params?.id.toString();
       return new PeopleController().getPerson(id);
     },

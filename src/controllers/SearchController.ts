@@ -1,11 +1,11 @@
 import axios, { AxiosResponse } from "axios";
-import { ResponseV1Model } from "../models/Response.v1.model";
+import { ResponseV1Models } from "../models/Response.v1.models";
 
 export class SearchController {
   public async searchTerm(
     entity: string,
     term: string
-  ): Promise<ResponseV1Model> {
+  ): Promise<ResponseV1Models> {
     return await axios
       .get(`https://swapi.dev/api/${entity}/?search=${term}`)
       .then((res: AxiosResponse) => res.data)

@@ -1,5 +1,5 @@
 import { Server } from "hapi";
-import Routes from "./routes/index.routes";
+import Routes from "./routes/_index.routes";
 import dotenv from "dotenv";
 
 dotenv.config({

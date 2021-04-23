@@ -1,4 +1,4 @@
-export class ResponseV1Model {
+export class ResponseV1Models {
   constructor(
     public count: number,
     public next: string,

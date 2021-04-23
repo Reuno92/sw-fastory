@@ -1,4 +1,4 @@
-import { ResponseV1Model } from "../models/Response.v1.model";
+import { ResponseV1Models } from "../models/Response.v1.models";
 import { ServerRoute, Request } from "hapi";
 import { PlanetsController } from "../controllers/PlanetsController";
 import { PlanetsV1Models } from "../models/Planets.v1.models";
@@ -10,7 +10,7 @@ const PlanetV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: API_PLANET,
-    handler: (request: Request): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<ResponseV1Models> => {
       if (request.query?.search) {
         return new SearchController().searchTerm(
           "planets",

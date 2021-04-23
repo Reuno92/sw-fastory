@@ -1,9 +1,9 @@
 import axios, { AxiosResponse } from "axios";
-import { ResponseV1Model } from "../models/Response.v1.model";
+import { ResponseV1Models } from "../models/Response.v1.models";
 import { StarshipsV1Models } from "../models/Starships.v1.models";
 
 export class StarshipsV1Controller {
-  getAllStarships(): Promise<ResponseV1Model> {
+  getAllStarships(): Promise<ResponseV1Models> {
     return axios
       .get("https://swapi.dev/api/starships/")
       .then((res: AxiosResponse) => res.data)

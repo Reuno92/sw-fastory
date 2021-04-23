@@ -4,7 +4,6 @@
  * A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
  */
 export class PlanetsV1Models {
-
   /**
    *
    * @param { string } names - The name of this planet.

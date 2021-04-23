@@ -9,7 +9,7 @@ const StarshipsV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "starships/",
-    handler: (): Promise<ResponseV1Model>  => {
+    handler: (): Promise<ResponseV1Model> => {
       return new StarshipsV1Controller().getAllStarships();
     },
     options: {

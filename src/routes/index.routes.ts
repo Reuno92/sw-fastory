@@ -1,8 +1,9 @@
 import { ServerRoute } from "hapi";
-import rootRoutes from "./root.v1.routes";
+import rootV1Routes from "./root.v1.routes";
 
 const routes: Array<ServerRoute> = [
-  ...rootRoutes
+  ...rootV1Routes,
+
 ];
 
 export default routes;

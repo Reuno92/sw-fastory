@@ -2,7 +2,7 @@ import * as Hapi from "hapi";
 import RootController from "../controllers/RootController";
 import { RootV1Models } from "../models/Root.v1.models";
 
-const rootRoutes: Array<Hapi.ServerRoute> = [
+const rootV1Routes: Array<Hapi.ServerRoute> = [
   {
     method: "GET",
     path: "/api/v1/",
@@ -15,4 +15,4 @@ const rootRoutes: Array<Hapi.ServerRoute> = [
   }
 ];
 
-export default rootRoutes;
+export default rootV1Routes;

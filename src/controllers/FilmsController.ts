@@ -12,7 +12,7 @@ export class FilmsController {
       });
   }
 
-  public getMovie(id: string): Promise<ResponseV1Model> {
+  public getMovie(id: string): Promise<FilmsV1Models> {
     return axios
       .get("https://swapi.dev/api/films/" + id)
       .then((res: AxiosResponse) => res.data)

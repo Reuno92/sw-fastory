@@ -27,7 +27,7 @@ const FilmV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
     path: APIV1 + "{id}",
-    handler: (request: Request): Promise<ResponseV1Model> => {
+    handler: (request: Request): Promise<FilmsV1Models> => {
       const id: string = request.params?.id.toString();
       return new FilmsController().getMovie(id);
     },

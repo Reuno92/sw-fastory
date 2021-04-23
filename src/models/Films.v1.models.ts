@@ -3,7 +3,7 @@
  *
  * Define resource for films endpoints
  */
-class FilmsV1Routes {
+class FilmsV1Models {
   /**
    *
    * @param { string } title - The title of this film

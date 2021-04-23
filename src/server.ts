@@ -1,25 +1,23 @@
 import { Server } from "hapi";
 import Routes from "./routes/index.routes";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 dotenv.config({
-  encoding: 'utf8',
+  encoding: "utf8",
   debug: true
-})
+});
 
 const init = async () => {
   const server = new Server({
     debug: { request: ["error"] },
     port: process.env.PORT || 3000,
-    host: process.env.HOST || 'localhost',
+    host: process.env.HOST || "localhost",
     routes: {
       cors: {
         origin: ["*"]
       }
     }
   });
-
-
 
   server.route(Routes);
 

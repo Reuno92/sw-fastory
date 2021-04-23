@@ -3,7 +3,7 @@ import { FilmsController } from "../controllers/FilmsController";
 import { ResponseV1Models } from "../models/Response.v1.models";
 import { Request } from "hapi";
 import { SearchController } from "../controllers/SearchController";
-import { FilmsV1Models } from '../models/Films.v1.models';
+import { FilmsV1Models } from "../models/Films.v1.models";
 
 const APIV1 = "/api/v1/films/";
 

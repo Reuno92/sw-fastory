@@ -1,6 +1,6 @@
 import { ResponseV1Models } from "../models/Response.v1.models";
 import axios, { AxiosResponse } from "axios";
-import { FilmsV1Models } from '../models/Films.v1.models';
+import { FilmsV1Models } from "../models/Films.v1.models";
 
 export class FilmsController {
   public getAllMovies(): Promise<ResponseV1Models> {

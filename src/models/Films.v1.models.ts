@@ -38,4 +38,3 @@ export class FilmsV1Models {
     public edited: string
   ) {}
 }
-

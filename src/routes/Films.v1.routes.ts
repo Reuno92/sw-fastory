@@ -5,7 +5,7 @@ import { Request } from "hapi";
 import { SearchController } from "../controllers/SearchController";
 import { FilmsV1Models } from "../models/Films.v1.models";
 
-const APIV1 = "/api/v1/films/";
+const APIV1 = "/api/v1/films";
 
 const FilmV1Routes: Array<ServerRoute> = [
   {

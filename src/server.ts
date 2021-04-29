@@ -14,12 +14,19 @@ const init = async () => {
     host: process.env.HOST || "localhost",
     routes: {
       cors: {
-        origin: ["*"]
+        origin: ["*"],
+        maxAge: 3600,
+        headers: ["Accept", "Authorization", "Content-Type"]
       }
     }
   });
 
   server.route(Routes);
+
+  await server.register([
+    require('blipp'),
+
+  ]);
 
   await server.start();
   console.log(`Server running on %s`, server.info.uri);

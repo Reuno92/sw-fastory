@@ -6,7 +6,7 @@
 export class PlanetsV1Models {
   /**
    *
-   * @param { string } names - The name of this planet.
+   * @param { string } name - The name of this planet.
    * @param { string } diameter - The diameter of this planet in kilometers.
    * @param { string } rotation_period - The number of standard hours it takes for this planet to complete a single rotation on its axis.
    * @param { string } orbital_period - The number of standard days it takes for this planet to complete a single orbit of its local star.
@@ -22,7 +22,7 @@ export class PlanetsV1Models {
    * @param { string } edited - The ISO 8601 date format of the time that this resource was edited.
    */
   constructor(
-    public names: string,
+    public name: string,
     public diameter: string,
     public rotation_period: string,
     public orbital_period: string,

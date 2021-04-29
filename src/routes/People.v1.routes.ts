@@ -9,7 +9,7 @@ const APIV1 = "/api/v1/";
 const PeopleV1Routes: Array<ServerRoute> = [
   {
     method: "GET",
-    path: APIV1 + "people/",
+    path: APIV1 + "people",
     handler: (request: Request): Promise<ResponseV1Models> => {
       if (request.query?.search) {
         return new SearchController().searchTerm(

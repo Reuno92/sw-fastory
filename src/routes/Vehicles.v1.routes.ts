@@ -11,7 +11,6 @@ const VehiclesV1Routes: Array<ServerRoute> = [
     method: "GET",
     path: APIV1,
     handler: (request: Request): Promise<ResponseV1Models> => {
-
       if (request.query?.search) {
         return new SearchController().searchTerm(
           "vehicles",

@@ -4,7 +4,7 @@ import { SpeciesController } from "../controllers/SpeciesController";
 import { SpeciesV1Models } from "../models/Species.v1.models";
 import { SearchController } from "../controllers/SearchController";
 
-const APIV1 = "/api/v1/species/";
+const APIV1 = "/api/v1/species";
 
 const SpeciesV1Routes: Array<ServerRoute> = [
   {
@@ -26,7 +26,7 @@ const SpeciesV1Routes: Array<ServerRoute> = [
   },
   {
     method: "GET",
-    path: APIV1 + "{id}",
+    path: APIV1 + "/{id}",
     handler: (request: Request): Promise<SpeciesV1Models> => {
       const ID = request.params.id.toString();
       return SpeciesController.getSpecie(ID);

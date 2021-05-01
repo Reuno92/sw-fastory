@@ -1,4 +1,4 @@
-import { Server } from "hapi";
+import Hapi, { Server } from "hapi";
 import Routes from "./routes/_index.routes";
 import dotenv from "dotenv";
 
@@ -8,6 +8,7 @@ dotenv.config({
 });
 
 const init = async () => {
+
   const server = new Server({
     debug: { request: ["error"] },
     port: process.env.PORT || 3000,
@@ -23,13 +24,21 @@ const init = async () => {
 
   server.route(Routes);
 
-  await server.register([
+  const devPluginDev: Array<Hapi.Plugin<any>> = [
     require('blipp'),
+    {
+      plugin: require('hapi-pino'),
+      options: {
+        prettyPrint: process.env.NODE_ENV !== 'production',
+        redact: ['req.headers.authorization']
+      }
+    }
+  ];
 
-  ]);
+  const devPluginProd: Array<Hapi.Plugin<any>> = [];
 
+  await server.register( (process.env.NODE_ENV !== 'production') ? devPluginDev : devPluginProd );
   await server.start();
-  console.log(`Server running on %s`, server.info.uri);
 };
 
 process.on("unhandledRejection", (err) => {

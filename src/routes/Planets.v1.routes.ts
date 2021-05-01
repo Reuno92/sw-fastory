@@ -23,7 +23,7 @@ const PlanetV1Routes: Array<ServerRoute> = [
   },
   {
     method: "GET",
-    path: API_PLANET + "{id}",
+    path: API_PLANET + "/{id}",
     handler: (request: Request): Promise<PlanetsV1Models> => {
       const ID = request.params.id.toString();
       return new PlanetsController().getPlanet(ID);

@@ -8,7 +8,6 @@ export class StarshipsV1Controller {
       .get("https://swapi.dev/api/starships/")
       .then((res: AxiosResponse) => res.data)
       .catch((err) => {
-        console.error(err);
         throw err.message;
       });
   }
@@ -18,7 +17,6 @@ export class StarshipsV1Controller {
       .get("https://swapi.dev/api/starships/" + id)
       .then((res: AxiosResponse) => res.data)
       .catch((err) => {
-        console.error(err);
         throw err.message;
       });
   }
